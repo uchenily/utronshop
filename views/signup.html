@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>signup</title>
+    <link rel="stylesheet" href="/static/css/login_signup.css">
+    <link rel="stylesheet" href="/static/css/font-icon/flaticon.css">
+</head>
+<body>
+    
+    <form id="myform" action="/signup" method="POST" class="signup_form" >
+        
+        <ul>
+            <li><i class="flaticon-social"></i><input class="signup_txtbx" type="text" placeholder="帐 号" name="name"></li>
+            <li><i class="flaticon-key"></i><input class="signup_txtbx" type="password" placeholder="密 码" name="pwd"></li>
+            <li><i class="flaticon-key"></i><input class="signup_txtbx" type="text" placeholder="邮 箱" name="email"></li>
+            <li><input class="submit_btn" type="submit" value="立即验证 "></li>
+        </ul>
+
+        {{ if .Message }}
+        <div id="message" style="font-size:16px;color:rgb(175, 175, 174);text-align:center;">{{ .Message }}</div>
+        {{ end }}
+    </form>
+
+    <script src="/static/js/message.js"></script>
+</body>
+</html>

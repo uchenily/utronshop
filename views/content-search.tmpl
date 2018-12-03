@@ -1,0 +1,32 @@
+{{ define "content-search" }}
+
+<div class="product-detail clearfix">
+    <div class="container clearfix">
+        <form class="search" method="get" action="search">
+            <input class="search-keyword" type="text" name="keyword" />
+            <input class="search-submit" type="submit" value="search" />
+        </form>
+    </div>
+
+    {{ if .Products }}
+    <div class="container clearfix">
+        <div class="search-result">
+        {{ range .Products }}
+            <div class="search-result-item clearfix">
+                <img src="{{.URL}}" />
+                <div>
+                    <h2><a href="{{ .Href}}">{{ .Name }}</a></h2>
+                    <h4>[{{ .Type }}]</h4>
+                </div>
+            </div>
+        {{ end }}
+        </div>
+    </div>
+    {{ else }}
+        <div class="container clearfix">
+        <span class="nothing-info">nothing :)</span>
+        </div>
+    {{ end}}
+</div>
+
+{{ end }}

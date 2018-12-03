@@ -1,0 +1,47 @@
+{{ define "content-detail" }}
+
+<div class="product-detail clearfix">
+    <div class="container clearfix">
+        <div class="product-intro1">
+            <div class="product-img" style="background-image: url({{.Product.URL}});"></div>
+            <div class="thumb-nail">
+                <div style="background-image: url({{.Product.URL}});"></div>
+                <div style="background-image: url({{.Product.URL}});"></div>
+                <div style="background-image: url({{.Product.URL}});"></div>
+            </div>
+        </div>
+        <div class="product-intro2">
+            <h3 class="pname">{{ .Product.Name }}</h3>
+            <p class="price">RMB {{ .Product.Price }}</p>
+            <p>{{ .Product_Desc }}</p>
+
+            <div class="type">
+                <span>TYPE: </span>
+                <ul>
+                    <li>{{ .Product.Type }}</li>
+                </ul>
+            </div>
+            {{ if .User}}
+            <form class="form-group" method="post" action="/book">
+                <input type="text" name="number" value="{{ .Product.Number}}" style="display:none;" />
+                <input type="text" name="username" value="{{ .User.Name}}" style="display:none;" />
+                <input type="text" name="email" placeholder="email"/>
+                <input type="text" name="tel" placeholder="telphone"/>
+                <input type="text" name="addr" placeholder="address"/>
+                <button type="submit" class="booking">Booking</button>
+            </form>
+            {{ end }}
+        </div>
+    </div>
+
+    <div class="container clearfix">
+        <div class="product-intro3">
+            <h2>More Details</h2>
+            <div class="particular">
+                {{ .Product_Detail }}
+            </div>
+        </div>
+    </div>
+</div>
+
+{{ end }}

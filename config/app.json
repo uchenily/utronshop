@@ -1,0 +1,10 @@
+{
+	"app_name": "utron shop project",
+	"base_url": "http://localhost:8080",
+	"port": 8080,
+	"verbose": false,
+	"static_dir": "static",
+	"view_dir": "views",
+	"database": "mysql",
+	"database_conn": "root:@/utronshop?charset=utf8&&parseTime=true"
+}

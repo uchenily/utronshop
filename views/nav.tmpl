@@ -1,0 +1,23 @@
+{{ define "nav" }}
+
+<nav class="nav clearfix" id="top">
+    <div class="top-menu">
+        <div class="container">
+            <div class="logo">UtronShop</div>
+            <div class="menu">
+                <ul>
+                    <li><a href="/" class="active">Home</a></li>
+                    <li><a href="/search">Search</a></li>
+                    <li><a href="/book"><i class="flaticon-shopping-cart"></i> Booking</a></li>
+                    {{ if .User}}
+                    <li class="user"><a href="/logout"><i class="flaticon-social"></i> {{ .User.Name }}</li></a>
+                    {{ else }}
+                    <li class="user"><a href="/login"><i class="flaticon-social"></i> Login</a>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+{{ end }}

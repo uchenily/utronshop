@@ -1,0 +1,38 @@
+{{ define "content-detail" }}
+
+<div class="product-detail clearfix">
+    <div class="container clearfix">
+        <div class="product-intro1">
+            <div class="product-img" style="background-image: url({{.Product.URL}});"></div>
+            <div class="thumb-nail">
+                <div style="background-image: url({{.Product.URL}});"></div>
+                <div style="background-image: url({{.Product.URL}});"></div>
+                <div style="background-image: url({{.Product.URL}});"></div>
+            </div>
+        </div>
+        <div class="product-intro2">
+            <h3 class="pname">{{ .Product.Name }}</h3>
+            <p class="price">RMB {{ .Product.Price }}</p>
+            <p>{{ .Product_Desc }}</p>
+
+            <div class="type">
+                <span>TYPE: </span>
+                <ul>
+                    <li>{{ .Product.Type }}</li>
+                </ul>
+            </div>
+            <div class="add"> Booking </div>
+        </div>
+    </div>
+
+    <div class="container clearfix">
+        <div class="product-intro3">
+            <h2>More Details</h2>
+            <div class="particular">
+                {{ .Product_Detail }}
+            </div>
+        </div>
+    </div>
+</div>
+
+{{ end }}

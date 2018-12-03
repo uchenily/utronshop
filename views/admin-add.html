@@ -1,0 +1,81 @@
+{{template "admin-head" .}}
+
+
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+<div class="card">
+    <div class="header">
+        <h4 class="title">Add</h4>
+    </div>
+    <div class="content">
+        <form action="/admin/add" method="POST">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control border-input" placeholder="name" name="name">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Number</label>
+                            <input type="text" class="form-control border-input" placeholder="number" name="number">
+                        </div>
+                    </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Type</label>
+                        <input type="text" class="form-control border-input" placeholder="type" name="type">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Count</label>
+                        <input type="text" class="form-control border-input" placeholder="count" name="count">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Price</label>
+                        <input type="text" class="form-control border-input" placeholder="price" name="price">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Href</label>
+                        <input type="text" class="form-control border-input" placeholder="eg: /detail/1001" name="href">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>URL</label>
+                        <input type="text" class="form-control border-input" placeholder="eg: /static/img/item-[number].jpg" name="url">
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-info btn-fill btn-wd">submit</button>
+            </div>
+            <div class="clearfix"></div>
+        </form>
+    </div>
+</div>                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+{{template "admin-foot"}}

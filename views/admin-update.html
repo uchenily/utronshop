@@ -1,0 +1,92 @@
+{{template "admin-head"}}
+
+
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+<div class="card">
+    <div class="header">
+        <h4 class="title">Update</h4>
+    </div>
+    <div class="content">
+        <form action="/admin/update" method="POST">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control border-input" value="{{.Product.Name}}" name="name">
+                    </div>
+                </div>
+                <!-- number 字段只允许在创建时更改-->
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Number</label>
+                        <input readonly type="text" class="form-control border-input" value="{{.Product.Number}}" name="number">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Type</label>
+                        <input type="text" class="form-control border-input" value="{{.Product.Type}}" name="type">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Count</label>
+                        <input type="text" class="form-control border-input" value="{{.Product.Count}}" name="count">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Price</label>
+                        <input type="text" class="form-control border-input" value="{{.Product.Price}}" name="price">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Href</label>
+                        <input type="text" class="form-control border-input" value="{{.Product.Href}}" name="href">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>URL</label>
+                        <input type="text" class="form-control border-input" value="{{.Product.URL}}" name="url">
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-info btn-fill btn-wd">update</button>
+                <button type="button" id="deleteRecord" class="btn btn-warning btn-fill btn-wd">delete</button>
+            </div>
+            
+            <div class="clearfix"></div>
+        </form>
+        <form id="form2" action="/admin/delete" method="POST" style="display:none;">
+            <div>
+                <div class="form-group">
+                    <label>Number</label>
+                    <input type="text" class="form-control border-input" value="{{.Product.Number}}" name="number">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+{{template "admin-foot"}}
